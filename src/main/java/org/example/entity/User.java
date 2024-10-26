@@ -16,6 +16,11 @@ public class User implements UserDetails {
     private Long id;
     @Size(min=2, message = "Не меньше 5 знаков")
     private String username;
+    private String name;
+    private String lastname;
+    @Size(min = 11,max=11, message = "Введите номер из 11 чисел")
+    private String number;
+
     @Size(min=2, message = "Не меньше 5 знаков")
     private String password;
     @Transient
@@ -92,4 +97,30 @@ public class User implements UserDetails {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public @Size(min = 11, max = 11, message = "Введите номер из 11 чисел") String getNumber() {
+        return number;
+    }
+
+    public void setNumber(@Size(min = 11, max = 11, message = "Введите номер из 11 чисел") String number) {
+        this.number = number;
+    }
+
 }

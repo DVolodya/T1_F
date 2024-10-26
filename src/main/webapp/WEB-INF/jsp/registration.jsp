@@ -19,7 +19,25 @@
             <form:errors path="username"></form:errors>
                 ${usernameError}
         </div>
-        <div>
+
+</div>
+        <form:input type="text" path="name" placeholder="Name"
+                    autofocus="true"></form:input>
+</div>
+
+</div>
+<form:input type="text" path="lastname" placeholder="Lastname"
+            autofocus="true"></form:input>
+</div>
+
+</div>
+<form:input type="text" path="number" placeholder="Number"
+            autofocus="true"></form:input>
+<form:errors path="number"></form:errors>
+    ${numberError}
+</div>
+
+<div>
             <form:input type="password" path="password" placeholder="Password"></form:input>
         </div>
         <div>
